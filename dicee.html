@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+                                                  
+        <img class="img1" src="images/dice1.png"  onclick="functionPlayer1()">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+                                        
+        <img class="img2" src="images/dice1.png"  onclick="functionPlayer2()">
+      </div>
+
+<!-- My Solution =) -->
+<script  >
+function functionPlayer1() {
+  document.getElementsByClassName("img1");
+   numPlayer1=Math.floor(Math.random() * 6)+1;     
+  var Diceeimage= "images/dice"+numPlayer1+".png"  
+  document.querySelectorAll("img")[0].setAttribute("src",Diceeimage);
+
+}
+
+
+function functionPlayer2() {
+  document.getElementsByClassName("img2");
+   numPlayer2=Math.floor(Math.random() * 6)+1;     
+  var Diceeimage= "images/dice"+numPlayer2+".png"  
+  document.querySelectorAll("img")[1].setAttribute("src",Diceeimage);
+
+  if (numPlayer1>numPlayer2)
+{   document.querySelector("h1").innerHTML="Player1 Wins"; }
+else if(numPlayer2>numPlayer1)
+{document.querySelector("h1").innerHTML="Player2 Wins"; }
+
+}
+   
+  </script>
+
+    </div>
+
+
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
